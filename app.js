@@ -44,4 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("mousemove", handleMove);
     card.addEventListener("mouseleave", handleLeave);
   });
+  setTimeout(() => {
+      document.getElementById("text").classList.add("animate");
+    }, 500);
 });

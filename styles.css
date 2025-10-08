@@ -46,3 +46,24 @@ html{
 .card:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
+.highlight {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    background: #369b47;
+    z-index: -1;
+    transition: width 1s ease;
+}
+
+.highlight.animate::before {
+    width: 100%;
+}
