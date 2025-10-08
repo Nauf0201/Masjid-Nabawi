@@ -1,0 +1,48 @@
+html{
+    scroll-behavior: smooth;
+}
+:root {
+--primary: #16a34a;
+--bg: #0c111b;
+--text: #e6eef6;
+--muted: #94a3b8;
+}
+.hilang{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.perspective {
+    perspective: 1200px;
+}
+.card {
+    transform-style: preserve-3d;
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.4s ease;
+}
+.layer {
+    transform-style: preserve-3d;
+    position: relative;
+}
+.layer > * {
+    transform: translateZ(var(--z, 0px));
+    transition: transform 0.2s ease;
+}
+.shine {
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.7;
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    transition: background 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
